@@ -419,6 +419,57 @@ animation:bbBeam 3.6s ease-in-out infinite,bbSheen 6s ease-in-out infinite}
 .bbw::before,.bbw::after{content:"";position:absolute;bottom:0;width:16px;height:70px;border-radius:4px;background:linear-gradient(90deg,#1a1a5a,#3b3b9a 50%,#1a1a5a);z-index:1}.bbw::before{left:22%}.bbw::after{right:22%}
 .bbw figcaption{position:absolute;z-index:3;bottom:0;left:50%;translate:-50% 0;padding:8px 22px;border-radius:99px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(10px);text-align:center;white-space:nowrap}
 @media(max-width:900px){.bbs{padding:26px 0 56px}.bbf{border-width:7px}.bbw{padding-bottom:58px}.bbw figcaption{white-space:normal;width:max-content;max-width:94%}}
+
+/* ===== هيرو جديد: أجذب وأوضح على الموبايل ===== */
+.hp{isolation:isolate}
+.hbg{position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.hbg i{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;animation:orb 14s ease-in-out infinite alternate}
+.hbg .o1{width:420px;height:420px;background:var(--cy);top:-120px;inset-inline-end:-120px}
+.hbg .o2{width:360px;height:360px;background:var(--peri);bottom:6%;inset-inline-start:-140px;animation-delay:-5s}
+.hbg .o3{width:240px;height:240px;background:#7fe6ff;top:38%;inset-inline-start:42%;opacity:.28;animation-delay:-9s}
+@keyframes orb{to{transform:translate(40px,30px) scale(1.15)}}
+.hwv{position:absolute;left:0;right:0;bottom:50px;width:100%;height:110px;z-index:-1;pointer-events:none}
+.hwv path{fill:rgba(255,255,255,.09);animation:wv 9s ease-in-out infinite alternate}.hwv .w2{fill:rgba(255,255,255,.14);animation-duration:12s;animation-direction:alternate-reverse}
+@keyframes wv{to{transform:translateX(-5%)}}
+.hwv{overflow:visible}
+.hk{position:relative;display:inline-flex;align-items:center;gap:10px;padding:7px 16px;margin-bottom:20px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.12);backdrop-filter:blur(10px);font:700 .88rem var(--d);animation:up .9s both}
+.hk i{width:9px;height:9px;border-radius:50%;background:var(--cy);box-shadow:0 0 0 0 rgba(0,221,254,.7);animation:ping 2s infinite}
+@keyframes ping{70%,100%{box-shadow:0 0 0 12px rgba(0,221,254,0)}}
+.hp h1 .c{display:block;width:fit-content}
+.hp h1 .c em{font-style:normal;color:var(--cy)}
+.hch{position:relative;display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:22px 0 28px;padding:0;animation:up 1s .22s both}
+.hch li{padding:5px 15px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.1);font:600 .86rem var(--d)}
+.hp p{margin:20px 0 20px}
+.row .btn.o:hover{background:#fff;color:var(--e)}
+.hws{position:absolute;inset:0}
+.hw{position:absolute;width:clamp(110px,15vw,170px);aspect-ratio:4/5;border-radius:18px;overflow:hidden;border:3px solid #fff;box-shadow:0 24px 46px rgba(0,10,150,.45);animation:fl 8s ease-in-out infinite alternate;transform:rotate(var(--r))}
+.hw img{width:100%;height:100%;object-fit:cover;display:block}
+.hw:nth-child(1){top:2%;inset-inline-start:0;--r:-9deg}
+.hw:nth-child(2){top:44%;inset-inline-end:-2%;--r:8deg;animation-delay:-2.5s}
+.hw:nth-child(3){bottom:-4%;inset-inline-start:34%;--r:-4deg;animation-delay:-5s}
+.glass{z-index:2}
+.scr{position:absolute;bottom:92px;left:50%;translate:-50% 0;width:26px;height:42px;border-radius:14px;border:2px solid rgba(255,255,255,.7);z-index:3}
+.scr i{position:absolute;top:8px;left:50%;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:#fff;animation:scr 1.8s ease-in-out infinite}
+@keyframes scr{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(14px)}}
+@media(min-width:901px){.hp h1{font-size:clamp(3rem,5.6vw,6rem)}.hp{padding:140px 0 150px}}
+@media(max-width:900px){
+ .hp{padding:104px 0 120px;min-height:100svh;align-items:flex-start}
+ .hg{gap:6px}
+ .hp h1{font-size:clamp(2.6rem,11.2vw,5.4rem);line-height:1.25}.hp h1 span{display:inline}.hp h1 .c{display:block}
+ .hp h1 span:first-child{display:block}
+ .hp p{font-size:1rem;line-height:1.85;margin:14px 0 16px}
+ .hch{margin-bottom:22px}
+ .row{flex-wrap:nowrap;gap:10px}.row .btn{flex:1;justify-content:center;width:auto;padding:14px 12px;font-size:.95rem;white-space:nowrap}
+ .hg>.arrow{display:none}
+ .vis{height:330px;margin-top:8px}
+ .glass{width:158px}.g1{top:8%;inset-inline-end:2%}.g2{bottom:4%;inset-inline-start:2%;width:142px}
+ .hw{width:104px;border-radius:14px}.hw:nth-child(3){inset-inline-start:40%;bottom:-8%}
+ .scr{display:none}
+ .hwv{bottom:40px}
+}
+@media(max-width:560px){.hp{padding:100px 0 110px}.hp p{margin:14px 0 14px}}
+@media(max-width:380px){.row .btn{font-size:.88rem;padding:13px 8px}}
+@media(prefers-reduced-motion:reduce){.hbg i,.hwv path,.hk i,.hp h1 .c em,.scr i,.hw{animation:none}}
 </style>
 </head>
 <body>
@@ -433,11 +484,14 @@ animation:bbBeam 3.6s ease-in-out infinite,bbSheen 6s ease-in-out infinite}
 <main>
 <div class="page on" id="home">
  <section class="hp" id="top">
+  <div class="hbg" aria-hidden="true"><i class="o1"></i><i class="o2"></i><i class="o3"></i></div>
+  <svg class="hwv" aria-hidden="true" viewBox="0 0 1440 160" preserveAspectRatio="none"><path class="w1" d="M0 80C120 20 240 20 360 70S600 130 720 80 960 20 1080 70 1320 130 1440 80V160H0Z"/><path class="w2" d="M0 100C140 50 260 60 380 100S620 140 740 100 980 50 1100 95 1340 140 1440 100V160H0Z"/></svg>
   <div class="wrap hg">
    <div class="ht">
-    <h1><span>حيث تصبح</span> <span>الرؤية</span><span class="c">قيمة</span></h1>
-    <p>في <span class="en">Blue Wave</span>، نصنع تصاميم ونقدّم حلول طباعة تساعد المشاريع والمؤسسات على بناء حضور بصري احترافي ومميز.</p>
-    <div class="row"><a class="btn w" href="#/" data-s="services">اكتشف خدماتنا</a></div>
+    <span class="hk"><i></i>استوديو التواصل البصري</span>
+    <h1><span>حيث تصبح الرؤية</span> <span class="c"><em>قيمة</em></span></h1>
+    <ul class="hch" aria-label="خدماتنا"><li>تصميم</li><li>محتوى</li><li>إدارة منصات</li><li>طباعة</li></ul>
+    <div class="row"><a class="btn w" href="#/" data-s="featured">اكتشف منتجاتنا</a><a class="btn o" href="#/" data-s="works">شاهد أعمالنا</a></div>
    </div>
    <svg aria-hidden="true" class="arrow" viewBox="0 0 190 130"><path d="M8 112C30 22 132 22 122 80C114 120 52 110 72 70C86 42 140 52 172 22M148 14L174 22L166 48"/></svg>
    <div class="vis" aria-hidden="true">
@@ -468,6 +522,7 @@ animation:bbBeam 3.6s ease-in-out infinite,bbSheen 6s ease-in-out infinite}
 <circle cx="48" cy="150" r="32" fill="none" stroke="#fff" stroke-width="1.2" stroke-dasharray="3 3" opacity=".7"/></svg></i><b>طباعة</b><small>كروت · استيكرات · فواصل</small></div>
    </div>
   </div>
+  <a class="scr" href="#/" data-s="about" aria-label="انزل للأسفل"><i></i></a>
  </section>
 
  <section class="panel" id="about"><div class="wrap">
