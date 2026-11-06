@@ -470,6 +470,12 @@ animation:bbBeam 3.6s ease-in-out infinite,bbSheen 6s ease-in-out infinite}
 @media(max-width:560px){.hp{padding:100px 0 110px}.hp p{margin:14px 0 14px}}
 @media(max-width:380px){.row .btn{font-size:.88rem;padding:13px 8px}}
 @media(prefers-reduced-motion:reduce){.hbg i,.hwv path,.hk i,.hp h1 .c em,.scr i,.hw{animation:none}}
+
+/* الكرت تحت أرجل اللوحة بدل ما يغطيها */
+.bbw{padding-bottom:132px}
+.bbw::before,.bbw::after{bottom:62px;height:76px}
+.bbw figcaption{bottom:0}
+@media(max-width:900px){.bbw{padding-bottom:128px}.bbw::before,.bbw::after{bottom:60px;height:74px}}
 </style>
 </head>
 <body>
@@ -545,7 +551,7 @@ animation:bbBeam 3.6s ease-in-out infinite,bbSheen 6s ease-in-out infinite}
   <div class="wg" id="wg"></div>
  </div></section>
 
- <section class="pb pt" id="prints"><div class="wrap pth"><div><span class="eyb">OUR PRINTS</span><h2 class="sech">مطبوعاتنا</h2></div>
+ <section class="pb pt" id="prints"><div class="wrap pth"><div><span class="eyb">PRINT DESIGNS</span><h2 class="sech">مطبوعات من تصميمنا</h2></div>
   <div class="pa"><button type="button" id="cn" aria-label="السابق">→</button><button type="button" id="cp" aria-label="التالي">←</button></div></div>
  <div class="wrap"><div class="pcs" id="pcs">
   <article class="pcd"><a class="pfan" href="#/prints" id="pfan" aria-label="استعرض الكتب والمجلات"></a>
